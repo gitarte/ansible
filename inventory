@@ -1,0 +1,13 @@
+[all:vars]
+ansible_python_interpreter=/usr/bin/python3
+
+[load_balancer]
+192.168.43.20 hostname=lb.art.local
+
+[web_servers]
+192.168.43.21 hostname=web1.art.local
+192.168.43.22 hostname=web2.art.local
+192.168.43.23 hostname=web3.art.local
+
+[database]
+192.168.43.24 hostname=db.art.local

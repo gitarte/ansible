@@ -1,0 +1,11 @@
+---
+- hosts: all
+  become: true
+  tasks:
+    - name: set hostnames
+      command: "hostnamectl hostname {{ hostname }}"
+      when: ansible_nodename !=  hostname
+    - name: install updates
+      dnf:
+        update_cache: yes
+        update_only: yes
